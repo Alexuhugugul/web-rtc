@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useRef } from "react";
+import "./App.css";
+import { CreateConversation } from "./models/CreateChat";
+import { initSdk } from "./models/initSdk";
+
 
 function App() {
+  // GLlH6o^9
+ 
+  const { login } = initSdk();
+//WMIHi=8p
+
+
+  function createChat() {
+    new CreateConversation().createChat({
+      isPublic: true,
+      isUber: true,
+      title: "thecrosssama",
+      usersId: [22167386,22168051],
+    });
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={login}>log in</button>
     </div>
   );
 }
