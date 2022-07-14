@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./App.css";
-import { CreateConversation } from "./models/CreateChat";
+import { MessengerService } from "./models/CreateChat";
 import { initSdk } from "./models/initSdk";
 
 
@@ -11,14 +11,7 @@ function App() {
 //WMIHi=8p
 
 
-  function createChat() {
-    new CreateConversation().createChat({
-      isPublic: true,
-      isUber: true,
-      title: "thecrosssama",
-      usersId: [22167386,22168051],
-    });
-  }
+
 
 
   return (
